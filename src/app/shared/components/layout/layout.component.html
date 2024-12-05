@@ -1,1 +1,16 @@
-<p>layout works!</p>
+<div>
+    <nav>
+        <app-header />
+    </nav>
+    <app-header-sidenav />
+    <mat-drawer-container class="app-material-container">
+        <mat-drawer #sidenav mode="side" opened>
+            <app-sidenav />
+        </mat-drawer>
+        <mat-drawer-content>
+            <router-outlet />
+            <!-- <mat-drawer-content>Main content</mat-drawer-content> -->
+        </mat-drawer-content>
+    </mat-drawer-container>
+    <app-footer />
+</div>
