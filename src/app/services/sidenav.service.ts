@@ -8,7 +8,7 @@ export class SidenavService {
   private sidenav!: MatSidenav;
 
   setSidenav(sidenav: MatSidenav) {
-    this.sidenav = sidenav;
+    this.sidenav = sidenav; 
   }
 
   toggle(): void {
