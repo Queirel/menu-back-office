@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -14,7 +14,13 @@ import { SidenavService } from '../../../services/sidenav.service';
 export class HeaderSidenavComponent {
   constructor(private sidenavService: SidenavService) {}
 
-  toggleSidenav() {
-    this.sidenavService.toggle();
+  @Output() toggleDrawer = new EventEmitter<void>();
+
+  onToggleDrawer(): void {
+    this.toggleDrawer.emit();
   }
+  
+  // toggleSidenav() {
+  //   this.sidenavService.toggle();
+  // }
 }
